@@ -1,4 +1,4 @@
-// JS file for Feb 9 class demo
+// // JS file for Feb 9 class demo
 
 var userName = prompt('What is your name?');
 alert('Welcome ' + userName + ', can you guess some stuff about me correctly?');
@@ -37,7 +37,7 @@ console.log('The user gussed ' + degree + ' about my degree');
 var work = prompt('Did I work at naughtyDog?');
 if(work.toUpperCase() === 'Y' || work.toUpperCase() === 'YES'){
   alert('That is incorrect, sorry');
-}else if(work.toUpperCase() === 'N' || work.toUpperCase() ===  'NO'){
+}else if(work.toUpperCase() === 'N' || work.toUpperCase() === 'NO'){
   alert('That is correct, I worked on Evequest for 2 years!');
 }else{
   alert('You typed in a bad response');
@@ -54,19 +54,62 @@ if(goal.toUpperCase() === 'Y' || goal.toUpperCase() === 'YES'){
 
 while(age != 26){
   var age = prompt('How old do you think I am?');
-    if(age > 26){
-      alert('You are to high!!!');
-    }else if(age < 26){
-      alert('You are to low!!');
-    }
- }
+  if(age > 26){
+    alert('You are to high!!!');
+  }else if(age < 26){
+    alert('You are to low!!');
+  }
+}
 alert('You are correct!')
+console.log('The user typed ' + age + 'for my age');
 
-// var age = prompt('How old do you think I am?');
-// if(age > 26){
-//   alert('You are to high!!!');
-// }else if(age < 26){
-//   alert('You are to low!!');
-// }else{
-//   alert('You are correct!')
-// }
+var pets = ['Finn','Amara'];
+var petAnswer = prompt('Can you name one of Ben\'s pets?');
+for (var i = 0; i < pets.length; i++) {
+  console.log(pets[i]);
+  if(petAnswer === pets[i]){
+    alert('YES');
+  }
+}
+alert('You had 2 guesses and failed!');
+
+var ctr = 4;
+console.log('Hello madude ' + (ctr > 0 ))
+while(favNum != 20 && ctr > 0 ){
+  var favNum = prompt('What is my favorite number? you have ' + ctr + ' guesses left');
+  if(favNum > 20){
+    alert('You are to high  !!!');
+  }else if(favNum < 20) {
+    alert('You are to low!!');
+  }else if(isNaN(favNum)) {
+    alert('Please type a number only');
+  }
+  --ctr;
+  if (ctr === 0){
+    alert('OPPS! you are out of guesses, better luck next time!');
+    break;
+  }else{
+    alert('You are correct!!')
+  }
+}
+
+var lived = prompt('Can you guess where I have lived?');
+var states = ['Colorado', 'Ohio', 'New Mexico', 'California', 'Washington'];
+// var correctGuesses = [];
+var isCorrect = false;
+
+
+for (i = 0; i < states.length; i++){
+  if(lived === states[i]){
+    // correctGuesses.push(lived);
+    isCorrect = true;
+    // alert(correctGuesses[i] + ' are Correct!');
+    // console.log('The user entered ' + correctGuesses);
+  }
+}
+
+if (isCorrect == false) {
+  alert('you were wrong!');
+} else {
+  alert('hurray you got it right!');
+}
