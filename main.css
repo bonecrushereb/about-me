@@ -1,13 +1,23 @@
-body{
-  background: #ffddaa;
-}
 
-h1, h2 {
+body{
+  background: #0e4f34;
+}
+h1{
+  text-align: center;
+  color: #5d2e91;
+  font-size: 36px;
+}
+h1 {
   color: #1F9ED5;
 }
 
+h2{
+  color:#ac42d1;
+  margin-left: 20px;
+}
+
 p{
-  color: #FE2E2E;
+  color: #21d433;
 }
 
 li{
