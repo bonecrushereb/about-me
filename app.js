@@ -33,3 +33,21 @@ if(degree.toUpperCase() === 'Y' || degree.toUpperCase() === 'YES'){
   alert('You typed in a bad response!')
 }
 console.log('The user gussed ' + degree + ' about my degree');
+
+var work = prompt('Did I work at naughtyDog?');
+if(work.toUpperCase() === 'Y' || work.toUpperCase() === 'YES'){
+  alert('That is incorrect, sorry');
+}else if(work.toUpperCase() === 'N' || work.toUpperCase() ===  'NO'){
+  alert('That is correct, I worked on Evequest for 2 years!');
+}else{
+  alert('You typed in a bad response');
+}
+
+var goal = prompt('Is my end goal to become a succesful developer')
+if(goal.toUpperCase() === 'Y' || goal.toUpperCase() === 'YES'){
+  alert('That is correct, doesn\'t everyone!');
+}else if (goal.toUpperCase() === 'N' || goal.toUpperCase() === 'NO') {
+  alert('That is incorrect!');
+}else{
+  alert('You typed in a bad response');
+}
