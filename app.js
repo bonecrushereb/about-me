@@ -43,7 +43,7 @@ if(work.toUpperCase() === 'Y' || work.toUpperCase() === 'YES'){
   alert('You typed in a bad response');
 }
 
-var goal = prompt('Is my end goal to become a succesful developer')
+var goal = prompt('Is my end goal to become a succesful developer');
 if(goal.toUpperCase() === 'Y' || goal.toUpperCase() === 'YES'){
   alert('That is correct, doesn\'t everyone!');
 }else if (goal.toUpperCase() === 'N' || goal.toUpperCase() === 'NO') {
@@ -51,3 +51,22 @@ if(goal.toUpperCase() === 'Y' || goal.toUpperCase() === 'YES'){
 }else{
   alert('You typed in a bad response');
 }
+
+while(age != 26){
+  var age = prompt('How old do you think I am?');
+    if(age > 26){
+      alert('You are to high!!!');
+    }else if(age < 26){
+      alert('You are to low!!');
+    }
+ }
+alert('You are correct!')
+
+// var age = prompt('How old do you think I am?');
+// if(age > 26){
+//   alert('You are to high!!!');
+// }else if(age < 26){
+//   alert('You are to low!!');
+// }else{
+//   alert('You are correct!')
+// }
