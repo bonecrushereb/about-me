@@ -1,9 +1,9 @@
 // // JS file for Feb 9 class demo
-
 var userName = prompt('What is your name?');
 alert('Welcome ' + userName + ', can you guess some stuff about me correctly?');
 console.log('The user said their name is ' + userName);
 
+cTally = 0;
 var ready = prompt('Are you ready to play the game? Don\'t forget to answer with a \'Y\' or \'N\' ');
 if(ready.toUpperCase() === 'Y' || ready.toUpperCase() === 'YES'){
   alert('Great lets continue!');
@@ -19,6 +19,8 @@ if(born.toUpperCase() === 'Y' || born.toUpperCase() === 'YES'){
   alert('That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California');
 }else if(born.toUpperCase() === 'N' || born.toUpperCase() === 'NO'){
   alert('Wow you know me well!');
+  cTally +=1;
+  console.log('cTally:' + cTally);
 }else {
   alert('You typed in a bad response!');
 }
@@ -27,6 +29,8 @@ console.log('The user guessed where I was born' + born );
 var degree = prompt('Do I have a BS degree?');
 if(degree.toUpperCase() === 'Y' || degree.toUpperCase() === 'YES'){
   alert('That is correct, I recieved my degree from the Art Institute of San Diego, California');
+  cTally +=1;
+  console.log('cTally:' + cTally);
 }else if(degree.toUpperCase() === 'N' || degree.toUpperCase() === 'NO'){
   alert('Sorry that answer is wrong');
 }else{
@@ -39,6 +43,8 @@ if(work.toUpperCase() === 'Y' || work.toUpperCase() === 'YES'){
   alert('That is incorrect, sorry');
 }else if(work.toUpperCase() === 'N' || work.toUpperCase() === 'NO'){
   alert('That is correct, I worked on Evequest for 2 years!');
+  cTally += 1;
+  console.log('cTally:' + cTally);
 }else{
   alert('You typed in a bad response');
 }
@@ -46,6 +52,7 @@ if(work.toUpperCase() === 'Y' || work.toUpperCase() === 'YES'){
 var goal = prompt('Is my end goal to become a succesful developer');
 if(goal.toUpperCase() === 'Y' || goal.toUpperCase() === 'YES'){
   alert('That is correct, doesn\'t everyone!');
+  cTally += 1;
 }else if (goal.toUpperCase() === 'N' || goal.toUpperCase() === 'NO') {
   alert('That is incorrect!');
 }else{
@@ -61,20 +68,24 @@ while(age != 26){
   }
 }
 alert('You are correct!')
+cTally += 1
+console.log('cTally:' + cTally);
 console.log('The user typed ' + age + 'for my age');
 
 var pets = ['Finn','Amara'];
 var petAnswer = prompt('Can you name one of Ben\'s pets?');
 for (var i = 0; i < pets.length; i++) {
   console.log(pets[i]);
+  console.log('cTally:' + cTally);
   if(petAnswer === pets[i]){
     alert('YES');
+    cTally += 1;
   }
 }
 alert('You had 2 guesses and failed!');
 
 var ctr = 4;
-console.log('Hello madude ' + (ctr > 0 ))
+// console.log('Hello madude ' + (ctr > 0 ))
 while(favNum != 20 && ctr > 0 ){
   var favNum = prompt('What is my favorite number? you have ' + ctr + ' guesses left');
   if(favNum > 20){
@@ -90,6 +101,8 @@ while(favNum != 20 && ctr > 0 ){
     break;
   }else{
     alert('You are correct!!')
+    cTally += 1;
+    console.log('cTally:' + cTally);
   }
 }
 
@@ -112,4 +125,11 @@ if (isCorrect == false) {
   alert('you were wrong!');
 } else {
   alert('hurray you got it right!');
+  cTally += 1;
+  console.log('cTally:' + cTally);
+}
+
+
+if(cTally <= 8){
+  alert('good job you got ' + cTally + ' correct');
 }
