@@ -171,6 +171,7 @@ function jsLived() {
     alert('you were wrong!');
   } else {
     // alert('hurray you got it right!');
+    answer8.textContent = 'hurray you got it right!';
     cTally += 1;
     console.log('cTally:' + cTally);
   }
@@ -187,4 +188,5 @@ jsWork();
 jsGoal();
 jsAge();
 jsPets();
+jsCtr();
 jsLived();
