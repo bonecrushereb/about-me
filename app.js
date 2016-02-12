@@ -34,9 +34,10 @@ function jsBorn() {
   var born = prompt('Do you think I was born in San Diego, California?');
   if (born.toUpperCase() === 'Y' || born.toUpperCase() === 'YES') {
     // alert('That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California');
-    question1.textContent = 'That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California';
+    answer1.textContent = 'That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California';
   } else if (born.toUpperCase() === 'N' || born.toUpperCase() === 'NO') {
-    alert('Wow you know me well!');
+    //alert('Wow you know me well!');
+    answer1.textContent = 'Wow you know me well!';
     cTally += 1;
     console.log('cTally:' + cTally);
   } else {
@@ -48,11 +49,13 @@ function jsBorn() {
 function jsDegree() {
   var degree = prompt('Do I have a BS degree?');
   if (degree.toUpperCase() === 'Y' || degree.toUpperCase() === 'YES') {
-    alert('That is correct, I recieved my degree from the Art Institute of San Diego, California');
+    // alert('That is correct, I recieved my degree from the Art Institute of San Diego, California');
+    answer2.textContent = 'That is correct, I recieved my degree from the Art Institute of San Diego, California';
     cTally += 1;
     console.log('cTally:' + cTally);
   } else if (degree.toUpperCase() === 'N' || degree.toUpperCase() === 'NO') {
-    alert('Sorry that answer is wrong');
+    // alert('Sorry that answer is wrong');
+    answer2.textContent = 'Sorry that answer is wrong';
   } else {
     alert('You typed in a bad response!')
   }
@@ -62,9 +65,11 @@ function jsDegree() {
 function jsWork() {
   var work = prompt('Did I work at naughtyDog?');
   if (work.toUpperCase() === 'Y' || work.toUpperCase() === 'YES') {
-    alert('That is incorrect, sorry');
+    // alert('That is incorrect, sorry');
+    answer3.textContent = 'That is incorrect, sorry';
   } else if (work.toUpperCase() === 'N' || work.toUpperCase() === 'NO') {
-    alert('That is correct, I worked on Evequest for 2 years!');
+    // alert('That is correct, I worked on Evequest for 2 years!');
+    answer3.textContent = 'That is correct, I worked on Evequest for 2 years!';
     cTally += 1;
     console.log('cTally:' + cTally);
   } else {
@@ -75,10 +80,12 @@ function jsWork() {
 function jsGoal() {
   var goal = prompt('Is my end goal to become a succesful developer');
   if (goal.toUpperCase() === 'Y' || goal.toUpperCase() === 'YES') {
-    alert('That is correct, doesn\'t everyone!');
+    // alert('That is correct, doesn\'t everyone!');
+    answer4.textContent = 'That is correct, doesn\'t everyone!';
     cTally += 1;
   } else if (goal.toUpperCase() === 'N' || goal.toUpperCase() === 'NO') {
-    alert('That is incorrect!');
+    // alert('That is incorrect!');
+    answer4.textContent = 'That is incorrect!';
   } else {
     alert('You typed in a bad response');
   }
@@ -88,12 +95,13 @@ function jsAge() {
   while (age != 26) {
     var age = prompt('How old do you think I am?');
     if (age > 26) {
-      alert('You are to high!!!');
+      alert('You are too high!!!');
     } else if (age < 26) {
-      alert('You are to low!!');
+      alert('You are too low!!');
     }
   }
-  alert('You are correct!')
+  // alert('You are correct!')
+  answer5.textContent = 'You are correct!';
   cTally += 1
   console.log('cTally:' + cTally);
   console.log('The user typed ' + age + 'for my age');
@@ -106,11 +114,14 @@ function jsPets() {
     console.log(pets[i]);
     console.log('cTally:' + cTally);
     if (petAnswer === pets[i]) {
-      alert('YES');
+      // alert('YES');
+      answer6.textContent = 'YES';
       cTally += 1;
+    } else {
+      alert('You had 1 guess and failed!');
+      break;
     }
   }
-  alert('You had 2 guesses and failed!');
 }
 
 function jsCtr() {
@@ -130,7 +141,8 @@ function jsCtr() {
       alert('OPPS! you are out of guesses, better luck next time!');
       break;
     } else {
-      alert('You are correct!!')
+      // alert('You are correct!!')
+      answer7.textContent = 'You are correct!!';
       cTally += 1;
       console.log('cTally:' + cTally);
     }
@@ -138,7 +150,7 @@ function jsCtr() {
 }
 
 function jsLived() {
-  var lived = prompt('<p id=""></p>');
+  var lived = prompt('Can you guess where I\'ve lived?');
   var states = ['Colorado', 'Ohio', 'New Mexico', 'California', 'Washington'];
   // var correctGuesses = [];
   var isCorrect = false;
@@ -150,6 +162,7 @@ function jsLived() {
       // correctGuesses.push(lived);
       isCorrect = true;
       // alert(correctGuesses[i] + ' are Correct!');
+      answer7.textContent = 'You are correct!!';
       // console.log('The user entered ' + correctGuesses);
     }
   }
@@ -157,7 +170,7 @@ function jsLived() {
   if (isCorrect == false) {
     alert('you were wrong!');
   } else {
-    alert('hurray you got it right!');
+    // alert('hurray you got it right!');
     cTally += 1;
     console.log('cTally:' + cTally);
   }
