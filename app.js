@@ -1,13 +1,13 @@
 // // JS file for Feb 9 class demo
 
 // Declaring function variables for the HTML
-var question1 = document.getElementById('answer1');
-var question2 = document.getElementById('answer2');
-var question3 = document.getElementById('answer3');
-var question4 = document.getElementById('answer4');
-var question5 = document.getElementById('answer5');
-var question6 = document.getElementById('answer6');
-var question7 = document.getElementById('answer7');
+var answer1 = document.getElementById('answer1');
+var answer2 = document.getElementById('answer2');
+var answer3 = document.getElementById('answer3');
+var answer4 = document.getElementById('answer4');
+var answer5 = document.getElementById('answer5');
+var answer6 = document.getElementById('answer6');
+var answer7 = document.getElementById('answer7');
 
 function jsUserName() {
   var userName = prompt('What is your name?');
@@ -33,7 +33,8 @@ function jsReady() {
 function jsBorn() {
   var born = prompt('Do you think I was born in San Diego, California?');
   if (born.toUpperCase() === 'Y' || born.toUpperCase() === 'YES') {
-    alert('That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California');
+    // alert('That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California');
+    question1.textContent = 'That answer is incorrect. I was actually born in Denver, Colorado. I did however move to San Diego, California';
   } else if (born.toUpperCase() === 'N' || born.toUpperCase() === 'NO') {
     alert('Wow you know me well!');
     cTally += 1;
@@ -166,3 +167,11 @@ function jsLived() {
     alert('good job you got ' + cTally + ' correct');
   }
 }
+
+jsBorn();
+jsDegree();
+jsWork();
+jsGoal();
+jsAge();
+jsPets();
+jsLived();
