@@ -1,4 +1,14 @@
 // // JS file for Feb 9 class demo
+
+// Declaring function variables for the HTML
+var question1 = document.getElementById('answer1');
+var question2 = document.getElementById('answer2');
+var question3 = document.getElementById('answer3');
+var question4 = document.getElementById('answer4');
+var question5 = document.getElementById('answer5');
+var question6 = document.getElementById('answer6');
+var question7 = document.getElementById('answer7');
+
 function jsUserName() {
   var userName = prompt('What is your name?');
   alert('Welcome ' + userName + ', can you guess some stuff about me correctly?');
@@ -127,7 +137,7 @@ function jsCtr() {
 }
 
 function jsLived() {
-  var lived = prompt('Can you guess where I have lived?');
+  var lived = prompt('<p id=""></p>');
   var states = ['Colorado', 'Ohio', 'New Mexico', 'California', 'Washington'];
   // var correctGuesses = [];
   var isCorrect = false;
